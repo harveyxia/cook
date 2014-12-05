@@ -16,13 +16,71 @@
   <div class='content' ng-controller="RecipeCtrl">
     <div class='h1'> {{r.name}} </div>
     <div class='p'> {{r.description}} </div>
-    <div class='box'>
-      <ul class='ingredients my-ul' ng-repeat="(section, items) in r.ingredients">
-        <div class='h4'> {{section}} </div>
-          <li ng-repeat="(name, i) in items">
-            {{i.q.val}} {{i.q.unit}} {{name}}
-          </li>
-      </ul>
+    <!-- RECIPE INFORMATION -->
+    <div>
+      <div class='box left-half half-width inline-block'>
+        <div class='small-caps h1'> ingredients </div>
+        <hr>
+        <ul class='ingredients my-ul' ng-repeat="(section, items) in r.ingredients">
+          <div class='h4'> {{section}} </div>
+            <li ng-repeat="(name, i) in items">
+              <span class='inline-block q-width'>{{i.q.val}}</span>
+              <span class='inline-block unit-width'>{{i.q.unit}}</span>
+              <span>{{name}}</span>
+            </li>
+        </ul>
+      </div>
+
+      <div class='box right-half half-width inline-block'>
+        <div>
+          <div class='small-caps h1'> about </div>
+          <hr>
+          <div>
+            <b> Yield: </b>
+            <span class='inline-block q-width'>{{r.yield.q.val}}</span>
+            <span class='inline-block unit-width'>{{r.yield.q.unit}}</span>
+          </div>
+          <div>
+            <b> Time: </b>
+            <span class='inline-block q-width'>{{r.timing}}</span>
+            <span class='inline-block unit-width'>hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class='right-half half-width'> <br> </div>
+      <div class='box right-half half-width inline-block'>
+        <div>
+          <div class='small-caps h1'> equipment </div>
+          <hr>
+          <div ng-repeat="(name, e) in r.equipment">
+            {{name}}
+            <span class='inline-block q-width'>{{e.size.val}}</span>
+            <span class='inline-block unit-width'>{{e.size.unit}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear-float"></div>
+    <!-- RECIPE STEPS -->
+    <div>
+      <div class="v-margin" ng-repeat="step in r.steps">
+        <div class='h1 small-caps v-margin'>
+          <span class="number-circle"> {{$index + 1}} </span>
+          {{step.heading.toLowerCase()}}
+        </div>
+        <div class="box center half-width">
+          <ul class='ingredients my-ul' ng-repeat="(name, i) in step.ingredients">
+              <li>
+                <span class='inline-block q-width'>{{i.q.val}}</span>
+                <span class='inline-block unit-width'>{{i.q.unit}}</span>
+                <span>{{name}}</span>
+              </li>
+          </ul>
+        </div>
+        <div>
+          <p ng-repeat="s in step.procedure"> {{s}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

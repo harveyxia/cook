@@ -1,4 +1,6 @@
 $nav-height: 50px;
+$content-width: 625px;
+$red: rgb(214, 79, 79);
 
 html, body {
     height: 100%;
@@ -6,6 +8,13 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 18px;
+}
+
+.content {
+    padding-top: 20px;
+    height: 100%;
+    width: $content-width;
+    margin: 0 auto;
 }
 
 .nav {
@@ -23,6 +32,12 @@ html, body {
     }
 }
 
+.v-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
 // remove default styling
 .my-ul {
     margin: 0;
@@ -31,8 +46,32 @@ html, body {
 }
 
 .box {
-    padding: 10px;
+    padding: 20px;
     border: 1px rgb(184, 184, 184) solid;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.no-border {
+    border: none;
+}
+
+.half-width {
+    width: $content-width / 2 - 50px;
+}
+
+.right-half {
+    float: right;
+}
+
+.left-half {
+    float: left;
+}
+
+.clear-float {
+    clear: both;
 }
 
 .ingredients {
@@ -46,20 +85,55 @@ html, body {
     font-weight: 700;
     text-align: center;
     font-size: 28px;
-    padding: 20px;
+}
+
+.h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
 }
 
 .h4 {
     font-weight: 700;
 }
 
-.p {
-    padding: 10px;
+.small-caps {
+    font-variant: small-caps;
 }
 
-.content {
-    padding-top: 20px;
-    height: 100%;
-    width: 650px;
-    margin: 0 auto;
+.float-right {
+    float: right;
+}
+
+.p {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.q-width {
+    width: 5ch;
+    text-align: right;
+}
+
+.unit-width {
+    widows: 4ch;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.number-circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background-color: $red;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
