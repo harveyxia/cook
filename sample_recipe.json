@@ -13,7 +13,7 @@
         },
     "ingredients":
         {
-            "main": {
+            "Main": {
                 "Broth": {
                     "name": "Broth",
                     "q": {"val": 750, "unit": "g" },

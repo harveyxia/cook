@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cook</title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="cook.js"></script>
+  <link rel="stylesheet" type="text/css" href="cook.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="App">
+  <nav class="nav">
+      <ul class='my-ul'>
+          <li><a href="#"></a>Cook</li>
+      </ul>
+  </nav>
+  <div class='content' ng-controller="RecipeCtrl">
+    <div class='h1'> {{r.name}} </div>
+    <div class='p'> {{r.description}} </div>
+    <div class='box'>
+      <ul class='ingredients my-ul' ng-repeat="(section, items) in r.ingredients">
+        <div class='h4'> {{section}} </div>
+          <li ng-repeat="(name, i) in items">
+            {{i.q.val}} {{i.q.unit}} {{name}}
+          </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
