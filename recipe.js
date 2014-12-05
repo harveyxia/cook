@@ -6,7 +6,7 @@ var recipeSchema = {
     "timing": "time in hours",
     "yield":
         {
-            "quantity": { "val": 8, "unit": "g" },
+            "q": { "val": 8, "unit": "g" },
             "description": "about 5 pint jars"
         },
     "equipment":
@@ -16,8 +16,19 @@ var recipeSchema = {
         },
     "ingredients":
         {
-            "ingredient1Name": ingredientSchema,
-            "ingredient2Name": ingredientSchema
+            "main":
+                {
+                    "ingredient1UniqueName": [
+                        ingredient1Type1Schema,
+                        ingredient1Type2Schema
+                    ],
+                    "ingredient2UniqueName": ingredientSchema
+                },
+            "sauce":
+                {
+                    "ingredient1UniqueName": ingredientSchema,
+                    "ingredient2UniqueName": ingredientSchema
+                }
         },
     "steps": [
         stepSchema,
@@ -28,9 +39,10 @@ var recipeSchema = {
 
 var ingredientSchema = {
     "name": "Onion",
-    "quantity": 200,
+    "q": 200,
     "unit": "g",
-    "state": "diced"
+    "type": "diced",
+    "substitutes": ["shallot", "spring onion"]
 };
 
 var equipmentSchema = {
@@ -45,13 +57,9 @@ var quantitySchema = {
 
 var stepSchema = {
     "heading": "Prepare the oven",
-    "description": "Preheat the oven to...",
-    "equipment":
-        {
-            "equipment1": equipmentSchema
-        },
+    "procedure": ["Preheat the oven to...", "then do this", "then do that"],
     "ingredients":
         {
             "ingredient1Name": ingredientSchema
-        },
+        }
 }

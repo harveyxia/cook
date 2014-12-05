@@ -1,0 +1,227 @@
+{
+    "name": "Chocolate and Mustard Stew",
+    "description": "Make extra and keep it in the freezer for a lazy day. It's even delicious as hearty brunch food when topped with a perfect yolk.",
+    "tags": ["beef", "stew"],
+    "timing": 11.5,
+    "yield":
+        {
+            "q": { "val": 10, "unit": "servings"}
+        },
+    "equipment":
+        {
+            "pressure cooker": { "size": {"val": 8, "unit": "l"}}
+        },
+    "ingredients":
+        {
+            "main": {
+                "Broth": {
+                    "name": "Broth",
+                    "q": {"val": 750, "unit": "g" },
+                    "substitutes": ["water"]
+                },
+                "Beef": [
+                    {
+                        "name": "Beef",
+                        "q": {"val": 250, "unit": "g" },
+                        "type": "chuck"
+                    },
+                    {
+                        "name": "Beef",
+                        "q": {"val": 500, "unit": "g" },
+                        "type": "oxtail"
+                    }
+                ],
+                "Oil": {
+                    "name": "Oil",
+                    "q": {"val": 50, "unit": "g" },
+                    "type": "for searing"
+                },
+                "Tomato paste": {
+                    "name": "Tomato paste",
+                    "q": {"val": 40, "unit": "g" }
+                },
+                "Sweet onion": {
+                    "name": "Sweet onion",
+                    "q": {"val": 100, "unit": "g" },
+                    "type": "1/2\" dice"
+                },
+                "Carrot": {
+                    "name": "Carrot",
+                    "q": {"val": 100, "unit": "g" },
+                    "type": "1/2\" dice"
+                },
+                "Crimini Mushrooms": {
+                    "name": "Crimini Mushrooms",
+                    "q": {"val": 100, "unit": "g" },
+                    "type": "1/2\" dice"
+                },
+                "Potato": {
+                    "name": "Potato",
+                    "q": {"val": 250, "unit": "g" },
+                    "type": "1/2\" dice"
+                },
+                "Leek": {
+                    "name": "Leek",
+                    "q": {"val": 50, "unit": "g" },
+                    "type": "1/2\" slice"
+                },
+                "Bay leaf": {
+                    "name": "Bay leaf",
+                    "q": {"val": 0.5, "unit": "g" },
+                    "type": "fresh"
+                },
+                "Thyme": {
+                    "name": "Thyme",
+                    "q": {"val": 2, "unit": "g" },
+                    "type": "fresh picked leaves"
+                },
+                "Chocolate": {
+                    "name": "Chocolate",
+                    "q": {"val": 100, "unit": "g" },
+                    "type": "dark"
+                },
+                "Parsley": {
+                    "name": "Parsley",
+                    "q": {"val": 7, "unit": "g" },
+                    "type": "flat leaf"
+                },
+                "Black pepper": {
+                    "name": "Black pepper",
+                    "q": {"val": 4, "unit": "g" }
+                },
+                "Salt": {
+                    "name": "Salt",
+                    "q": {"val": 15, "unit": "g" }
+                },
+                "All-purpose flour": {
+                    "name": "All-purpose flour",
+                    "q": {"val": 12, "unit": "g" }
+                },
+                "Mustard": {
+                    "name": "Mustard",
+                    "q": {"val": 50, "unit": "g" },
+                    "type": "whole grain"
+                },
+                "Butter": {
+                    "name": "Butter",
+                    "q": {"val": 40, "unit": "g" }
+                }
+            }
+        },
+    "steps":
+        [
+            {
+                "heading": "Sear and pressure cook ingredients",
+                "procedure": ["Sear meat in bottom of pressure cooker until all sides are very dark. Then remove.", "Add tomato paste and sear until dark. Add a small amount of water, and scrape away all the good bits at the bottom.", "Add 750 g water or stock, then add meat back to pressure cooker. Pressure cook for 45 minutes.", "Relieve pressure. Strain broth into a separate container and let it settle for a few minutes to separate fat.", "While the broth is settling, remove meat from pressure cooker. Pull oxtail away from the bone, and pull chuck into smaller pieces.", "Skim fat off the surface of the broth, and return to pressure cooker. Boil off the liquid on high heat until completely evaporated. Then, add flour. Cook until dark, and then add all remaining broth."],
+                "ingredients":
+                    {
+                        "Broth": {
+                            "name": "Broth",
+                            "q": {"val": 750, "unit": "g" },
+                            "substitutes": ["water"]
+                        },
+                        "Beef": [
+                            {
+                                "name": "Beef",
+                                "q": {"val": 250, "unit": "g" },
+                                "type": "chuck"
+                            },
+                            {
+                                "name": "Beef",
+                                "q": {"val": 500, "unit": "g" },
+                                "type": "oxtail"
+                            }
+                        ],
+                        "Oil": {
+                            "name": "Oil",
+                            "q": {"val": 50, "unit": "g" },
+                            "type": "for searing"
+                        },
+                        "Tomato paste": {
+                            "name": "Tomato paste",
+                            "q": {"val": 40, "unit": "g" }
+                        },
+                        "All-purpose flour": {
+                            "name": "All-purpose flour",
+                            "q": {"val": 12, "unit": "g" }
+                        }
+                    }
+            },
+            {
+                "heading": "Cook vegetables",
+                "procedure": ["Add vegetables, bay leaf, salt, and pepper, and cook gently until tender.", "IP: Add vegetables in order of doneness that you desire. We add potatoes and carrots first; then onion and bay leaves; then salt, pepper, and leek; and mushrooms last.", "Once the vegetables are cooked, return pulled meat to pot and keep at a low simmer for about 20 minutes."],
+                "ingredients":
+                    {
+                        "Sweet onion": {
+                            "name": "Sweet onion",
+                            "q": {"val": 100, "unit": "g" },
+                            "type": "1/2\" dice"
+                        },
+                        "Carrot": {
+                            "name": "Carrot",
+                            "q": {"val": 100, "unit": "g" },
+                            "type": "1/2\" dice"
+                        },
+                        "Crimini Mushrooms": {
+                            "name": "Crimini Mushrooms",
+                            "q": {"val": 100, "unit": "g" },
+                            "type": "1/2\" dice"
+                        },
+                        "Potato": {
+                            "name": "Potato",
+                            "q": {"val": 250, "unit": "g" },
+                            "type": "1/2\" dice"
+                        },
+                        "Leek": {
+                            "name": "Leek",
+                            "q": {"val": 50, "unit": "g" },
+                            "type": "1/2\" slice"
+                        },
+                        "Bay leaf": {
+                            "name": "Bay leaf",
+                            "q": {"val": 0.5, "unit": "g" },
+                            "type": "fresh"
+                        },
+                        "Black pepper": {
+                            "name": "Black pepper",
+                            "q": {"val": 4, "unit": "g" }
+                        },
+                        "Salt": {
+                            "name": "Salt",
+                            "q": {"val": 15, "unit": "g" }
+                        }
+                    }
+            },
+            {
+                "heading": "Prepare the oven",
+                "procedure": ["Once the stew has simmered for about 20 minutes and all flavors have developed, add thyme, mustard, dark chocolate, and butter. Mix well.", "TIP: Add broth or water to thin if desired.", "Add meat back to the stew, and stir gently so as not to puree it.", "Add fresh parsley last. If making in advance to serve later, add the parsley just before service."],
+                "ingredients":
+                    {
+                        "Mustard": {
+                            "name": "Mustard",
+                            "q": {"val": 50, "unit": "g" },
+                            "type": "whole grain"
+                        },
+                        "Butter": {
+                            "name": "Butter",
+                            "q": {"val": 40, "unit": "g" }
+                        },
+                        "Thyme": {
+                            "name": "Thyme",
+                            "q": {"val": 2, "unit": "g" },
+                            "type": "fresh picked leaves"
+                        },
+                        "Chocolate": {
+                            "name": "Chocolate",
+                            "q": {"val": 100, "unit": "g" },
+                            "type": "dark"
+                        },
+                        "Parsley": {
+                            "name": "Parsley",
+                            "q": {"val": 7, "unit": "g" },
+                            "type": "flat leaf"
+                        }
+                    }
+            }
+        ]
+}
