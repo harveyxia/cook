@@ -164,3 +164,17 @@ html, body {
         top: 6px;
     }
 }
+
+.fullscreen {
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    top: -100%;
+    position: absolute;
+    z-index: 9999;
+    color: #eee8d5;
+    background-color: #002b36;
+    transition: 1000ms;
+}

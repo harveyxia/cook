@@ -10,6 +10,7 @@ App.controller('RecipeCtrl', ['$scope', '$http', function($scope, $http) {
             // console.log(res.data);
             // console.log(r);
          });
+    $scope.slideDown = slideDown;
 }]);
 
 function formatRecipe(r) {
@@ -29,4 +30,9 @@ function formatRecipe(r) {
         }
     };
     return formatted_r;
+}
+
+function slideDown() {
+    console.log($('.overlay'));
+    $('.overlay').css('top', 0);
 }
