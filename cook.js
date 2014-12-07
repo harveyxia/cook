@@ -6,11 +6,14 @@ App.controller('RecipeCtrl', ['$scope', '$http', function($scope, $http) {
          .then(function(res) {
             $scope.r = res.data;
             $scope.r.ingredients = formatRecipe(res.data);
-            console.log($scope.r);
-            // console.log(res.data);
-            // console.log(r);
+            $scope.steps = allSteps(res.data.steps);
+            console.log($scope.steps);
          });
     $scope.slideDown = slideDown;
+    $scope.stepIndex = 0;
+    $scope.incrementStep = incrementStep;
+    $scope.decrementStep = decrementStep;
+    console.log($scope.stepIndex);
 }]);
 
 function formatRecipe(r) {
@@ -30,6 +33,23 @@ function formatRecipe(r) {
         }
     };
     return formatted_r;
+}
+
+function allSteps(steps) {
+    var allSteps = [];
+    steps.forEach(function(step) {
+        allSteps = allSteps.concat(step.procedure);
+    });
+    return allSteps;
+}
+
+function incrementStep(i, steps) {
+    console.log(i);
+    return Math.min(i+1, steps-1);
+}
+
+function decrementStep(i) {
+    return Math.max(i-1, 0);
 }
 
 function slideDown() {

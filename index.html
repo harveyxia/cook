@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App" ng-controller="RecipeCtrl">
 <head>
   <title>Cook</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -10,16 +10,19 @@
 </head>
 
 <div class="fullscreen overlay">
-  Cooking steps here
+  <button class="btn" ng-click="stepIndex = decrementStep(stepIndex)">Back</button>
+  {{stepIndex}}
+  <div class="step" ng-show="stepIndex == $index" ng-repeat="step in steps"> {{step}} </div>
+  <button class="btn" ng-click="stepIndex = incrementStep(stepIndex, steps.length)">Forward</button>
 </div>
 
-<body ng-app="App">
+<body>
   <nav class="nav">
       <ul class='my-ul'>
           <li><a href="#"></a>Cook</li>
       </ul>
   </nav>
-  <div class='content' ng-controller="RecipeCtrl">
+  <div class='content'>
     <div class='h1'> {{r.name}} </div>
     <div class='p'> {{r.description}} </div>
 
