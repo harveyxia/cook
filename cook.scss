@@ -137,3 +137,30 @@ html, body {
     text-align: center;
     vertical-align: middle;
 }
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #ab3c3c;
+    outline: none;
+    background-color: $red;
+    display: block;
+    padding: 25px 40px;
+    margin: 30px auto;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    &:hover {
+        box-shadow: 0 4px #ab3c3c;
+        top: 2px;
+    }
+
+    &:active {
+        box-shadow: 0 0 #ab3c3c;
+        top: 6px;
+    }
+}
