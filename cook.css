@@ -8,8 +8,13 @@ html, body {
 .content {
   padding-top: 20px;
   height: 100%;
-  width: 625px;
   margin: 0 auto; }
+
+.content-width {
+  width: 625px; }
+
+.overlay-width {
+  width: 90%; }
 
 .nav {
   width: 100%;
@@ -38,11 +43,22 @@ html, body {
 .center {
   margin: 0 auto; }
 
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
 .no-border {
   border: none; }
 
 .half-width {
   width: 262.5px; }
+
+.half-height {
+  height: 50%; }
 
 .right-half {
   float: right; }
@@ -110,7 +126,7 @@ html, body {
   box-shadow: 0 6px #ab3c3c;
   outline: none;
   background-color: #d64f4f;
-  display: block;
+  display: inline-block;
   padding: 25px 40px;
   margin: 30px auto;
   cursor: pointer;
@@ -127,6 +143,11 @@ html, body {
     box-shadow: 0 0 #ab3c3c;
     top: 6px; }
 
+.btn-small {
+  padding: 10px 20px;
+  margin: 15px auto;
+  font-size: 14px; }
+
 .fullscreen {
   height: 100%;
   width: 100%; }
@@ -137,6 +158,18 @@ html, body {
   z-index: 9999;
   color: #eee8d5;
   background-color: #002b36;
-  transition: 1000ms; }
+  transition: 800ms;
+  overflow: hidden;
+  font-size: 27px; }
+
+.text-align-center {
+  text-align: center; }
+
+.text-align-left {
+  text-align: left; }
+
+.dim-text {
+  font-size: 18px;
+  color: grey; }
 
 /*# sourceMappingURL=cook.css.map */

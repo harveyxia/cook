@@ -9,11 +9,19 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
 </head>
 
-<div class="fullscreen overlay">
-  <button class="btn" ng-click="stepIndex = decrementStep(stepIndex)">Back</button>
+<div class="fullscreen overlay" tabindex="0" ng-keydown="stepIndex = arrowKeyNav($event, stepIndex, steps.length)">
   {{stepIndex}}
-  <div class="step" ng-show="stepIndex == $index" ng-repeat="step in steps"> {{step}} </div>
-  <button class="btn" ng-click="stepIndex = incrementStep(stepIndex, steps.length)">Forward</button>
+  <div class="absolute-center half-height overlay-width">
+    <div class="fullscreen step" ng-show="stepIndex == $index" ng-repeat="step in steps">
+      <div class="h1 number-circle"> {{$index+1}}</div>
+      <p class="dim-text text-align-left">{{steps[$index-1]}}</p>
+      <p class="text-align-left">{{step}}</p>
+      <p class="dim-text text-align-left">{{steps[$index+1]}}</p>
+    </div>
+    <button class="btn btn-small" ng-click="decrementStep(stepIndex)"><</button>
+    <button class="btn btn-small" ng-click="incrementStep(stepIndex, steps.length)">></button>
+    <button class="btn btn-small" ng-click="slideUp()"> Exit </button>
+  </div>
 </div>
 
 <body>
@@ -22,11 +30,13 @@
           <li><a href="#"></a>Cook</li>
       </ul>
   </nav>
-  <div class='content'>
+  <div class='content content-width'>
     <div class='h1'> {{r.name}} </div>
     <div class='p'> {{r.description}} </div>
 
-    <button class="btn" ng-click="slideDown()"> Get Cooking </button>
+    <div class="text-align-center">
+      <button class="btn" ng-click="slideDown()"> Get Cooking </button>
+    </div>
 
     <!-- RECIPE INFORMATION -->
     <div>
