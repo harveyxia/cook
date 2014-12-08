@@ -29,17 +29,16 @@ App.controller('RecipeCtrl', ['$rootScope', '$scope', '$http',
             results = e.results[0];
             var latestEvent = event.results[event.results.length-1][0].transcript;
             latestEvent = $.trim(latestEvent);
-            console.log($.trim(latestEvent));
             if (latestEvent === "back") {
-                console.log('back');
-                return decrementStep($scope.stepIndex);
+                $scope.$apply(function() {
+                    decrementStep($scope.stepIndex, $scope.steps.length);
+                });
             } else if (latestEvent === "next") {
-                console.log('next');
-                console.log(incrementStep($scope.stepIndex, $scope.steps.length));
-                return incrementStep($scope.stepIndex, $scope.steps.length);
+                $scope.$apply(function() {
+                    incrementStep($scope.stepIndex, $scope.steps.length);
+                });
             }
         }
-        $scope.stepIndex = recognition.onresult;
     }
 
     // $scope.stepIndex = recognition.onresult;
@@ -73,25 +72,22 @@ App.controller('RecipeCtrl', ['$rootScope', '$scope', '$http',
 
     function incrementStep(i, steps) {
         $scope.stepIndex = Math.min(i+1, steps-1);
-        // return Math.min(i+1, steps-1);
     }
 
     function decrementStep(i) {
         $scope.stepIndex = Math.max(i-1, 0);
-        // return Math.max(i-1, 0);
     }
 
     function arrowKeyNav(e, stepIndex, steps) {
         switch(e.keyCode) {
             case 37:
-                return decrementStep(stepIndex);
+                decrementStep(stepIndex);
             case 39:
-                return incrementStep(stepIndex, steps);
+                incrementStep(stepIndex, steps);
             case 27:
                 slideUp();
-                return stepIndex;
             default:
-                return stepIndex;
+                console.log('Key not recognized.');
         }
     }
 

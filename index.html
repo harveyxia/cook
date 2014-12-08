@@ -9,8 +9,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
 </head>
 
-<div class="fullscreen overlay" tabindex="0" ng-keydown="stepIndex = arrowKeyNav($event, stepIndex, steps.length)">
-  {{stepIndex}}
+<div class="fullscreen overlay" tabindex="0" ng-keydown="arrowKeyNav($event, stepIndex, steps.length)">
   <div class="absolute-center half-height overlay-width">
     <div class="fullscreen step" ng-show="stepIndex == $index" ng-repeat="step in steps">
       <div class="h1 number-circle"> {{$index+1}}</div>
