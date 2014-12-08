@@ -79,13 +79,14 @@ App.controller('RecipeCtrl', ['$rootScope', '$scope', '$http',
     }
 
     function arrowKeyNav(e, stepIndex, steps) {
+        console.log(e.keyCode);
         switch(e.keyCode) {
             case 37:
-                decrementStep(stepIndex);
+                return decrementStep(stepIndex);
             case 39:
-                incrementStep(stepIndex, steps);
+                return incrementStep(stepIndex, steps);
             case 27:
-                slideUp();
+                return slideUp();
             default:
                 console.log('Key not recognized.');
         }
